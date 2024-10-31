@@ -1,0 +1,71 @@
+/* src/Navbar.css */
+.navbar {
+  position: fixed;
+  bottom: 20px; /* Padding from the bottom edge */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  /* width: 70%; */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 10px; /* Rounded corners for list items */
+  width: 60px; /* Fixed width for all buttons */
+  height: 60px; /* Fixed height for all buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  font-size: 24px; /* Base font size for non-emoji items */
+  padding: 0; /* Remove additional padding */
+}
+
+.navbar li:hover {
+  background-color: #ff6347; /* Background color on hover */
+  color: #fff; /* Ensure text remains white */
+}
+
+.navbar li.active {
+  font-weight: bold;
+}
+
+.navbar li.emoji {
+  font-size: 40px; /* Larger font size for emojis */
+}
+
+.navbar li a {
+  color: inherit; /* Ensure link color matches text color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 8px 16px;
+  }
+  .navbar li {
+    margin: 0 10px;
+    width: 50px; /* Adjust width for smaller screens */
+    height: 50px; /* Adjust height for smaller screens */
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+  .navbar li.emoji {
+    font-size: 30px; /* Adjust font size for emojis on smaller screens */
+  }
+}
